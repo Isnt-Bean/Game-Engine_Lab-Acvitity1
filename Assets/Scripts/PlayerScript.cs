@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         if (other.gameObject.CompareTag("Food"))
         {
             //scale X and Z up by * 1.1
-            
+            rb.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
         }
     }
 }

@@ -1,27 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class Food : MonoBehaviour
 {
     public GameObject food;
     
-    public void instantiate()
+
+    void Update()
     {
-        float x = Random.Range(-23f, 25f);
-        float z = Random.Range(-16.5f, 4.5f);
-        
-        //instantiate a new food on a random point of the platform that isn't in the wall
-        Instantiate(food, new Vector3(x,0.5f,z), transform.rotation);
-    }
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Player")
+        GameObject[] foods = GameObject.FindGameObjectsWithTag("Food");
+        if (foods.Length == 0)
         {
-            //make a noise then destroy
-            instantiate();
-            Destroy(gameObject);
+            int randx = UnityEngine.Random.Range(-22, 25);
+            int randz = UnityEngine.Random.Range(-16, 4);
+            Instantiate(food, new Vector3(randx,0.5f,randz), Quaternion.identity);
         }
     }
+
 }
