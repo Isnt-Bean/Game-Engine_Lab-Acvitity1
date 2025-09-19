@@ -1,7 +1,7 @@
 # Game-Engine_Lab-Acvitity1
+![GameEngineLab1](https://github.com/user-attachments/assets/c6f98e68-4d02-42f1-8033-d6072748a0ec) 
 Alexander Bean, 100927087
 Project Name: Grower
-![GameEngineLab1](https://github.com/user-attachments/assets/c6f98e68-4d02-42f1-8033-d6072748a0ec) 
 
 Reflection Questions:
 I used the food as a singleton because it would make more sense and work better with one source of growing
